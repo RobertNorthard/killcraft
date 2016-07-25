@@ -1,0 +1,313 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+2DTileEngine
+</name>
+</assembly>
+<members>
+<member name="M:_2DTileEngine.ISprite.LoadTextures(System.Drawing.Image[])">
+	<summary>
+ Load Sprite Textures
+ </summary>
+	<param name="textures">Sprite Textures as param array</param>
+</member><member name="M:_2DTileEngine.ISprite.DrawSprite(System.Drawing.Graphics@)">
+	<summary>
+ Method for Drawing Sprite
+ </summary>
+	<param name="g">Graphics object</param>
+</member><member name="M:_2DTileEngine.ISprite.MoveLeft">
+	<summary>
+ Move Sprite Left
+ </summary>
+</member><member name="M:_2DTileEngine.ISprite.MoveRight">
+	<summary>
+ Move Sprite Right
+ </summary>
+</member><member name="M:_2DTileEngine.ISprite.MoveDown">
+	<summary>
+ Move Sprite Down
+ </summary>
+</member><member name="M:_2DTileEngine.ISprite.MoveUp">
+	<summary>
+ Move Sprite Up
+ </summary>
+</member><member name="T:_2DTileEngine.ISprite">
+	<summary>
+ Manages the relation ship between classes, and the need for certain methods when manipulating sprites positioning
+ </summary>
+	<remarks>Implemented by Sprite Class and SpriteAI Class</remarks>
+</member><member name="P:_2DTileEngine.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:_2DTileEngine.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:_2DTileEngine.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:_2DTileEngine.Bullet.#ctor(System.Drawing.Rectangle,System.Int32,System.Int32,System.Drawing.Bitmap[])">
+	<summary>
+ On creating new objects there is no default constructor
+ </summary>
+	<param name="spritePosition">Stores current sprite positioning</param>
+	<param name="bulletVelocity">Stores bullet velocity</param>
+	<param name="spriteState">Stores the sprite, sprite state i.e. facing direction</param>
+	<param name="bulletTexture">Loads bullet textures</param>
+</member><member name="M:_2DTileEngine.Bullet.LoadTexture(System.Drawing.Bitmap[])">
+	<summary>
+ Method used to load bullet textures
+ </summary>
+	<param name="bulletTexture">array of bullet textures as bitmaps</param>
+</member><member name="M:_2DTileEngine.Bullet.UpdateBulletPosition">
+	<summary>
+ Updates bullet position based on the sprite positioning at the time the bullet was instantiated
+ This ensures bullet continues to go in the same direction
+ </summary>
+	<remarks>Speed = Distance/Time</remarks>
+</member><member name="M:_2DTileEngine.Bullet.Dispose">
+	<summary></summary>
+</member><member name="M:_2DTileEngine.Bullet.FireBullet(System.Drawing.Graphics)">
+	<summary>
+ Draw ne bullet on the games canvas
+ </summary>
+	<param name="g">Graphics obect used to draw the bullet on canvas</param>
+</member><member name="T:_2DTileEngine.Bullet">
+	<summary>
+ Bullet Class responsible for created new bullets
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.MapHeight">
+	<summary>
+ Stores the game maps height
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.MapWidth">
+	<summary>
+ Stores the game maps width
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.TileHeight">
+	<summary>
+ Stores the games tile height
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.TileWidth">
+	<summary>
+ Stores the games tile width
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.GameMap">
+	<summary>
+ An array which stores the game map
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.FormWidth">
+	<summary>
+ Stores the environments width
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.FormHeight">
+	<summary>
+ Stores the environments height
+ </summary>
+</member><member name="F:_2DTileEngine.GameMechanics.Velocity">
+	<summary>
+ Stores sprites velocity
+ </summary>
+</member><member name="M:_2DTileEngine.GameMechanics.GetMagnitude(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+	<summary>
+ Gets the magnitude between two points located on a 2D plane using the Cartersian coordinate system
+ d=2 root(y2-y1)^2+(x2-x1)^2
+ </summary>
+	<param name="x2">entity two x location</param>
+	<param name="x1">entity one x location</param>
+	<param name="y2">entity two y location</param>
+	<param name="y1">entity one y location</param>
+	<returns>Returns the distance between two points as an integer</returns>
+</member><member name="M:_2DTileEngine.GameMechanics.CheckBounds(System.Drawing.Rectangle@)">
+	<summary>
+ This method is responsible for determining if an object adventures outside of the game playable region
+ </summary>
+	<param name="boundingBox">A rectangle representing the sprites width, height, x and y positionings</param>
+</member><member name="T:_2DTileEngine.GameMechanics">
+	<summary>
+ The game mechanics class is responsible for managing the games physics, such as vector manipulation
+ and collision detection etc. 
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite._selectedTile">
+	<summary>
+ The tile the players sprite is currently on
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite._textures">
+	<summary>
+ Stores sprite textures
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite._item">
+	<summary>
+ A new object of type bullet
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite.State">
+	<summary>
+ Stores the current sprite state i.e. the direction the sprite is facing
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite.SpriteRectangle">
+	<summary>
+ The player sprite bounding box. Stores the sprite x, y location and width, height
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite.HealthValue">
+	<summary>
+ Stores the player health
+ </summary>
+</member><member name="F:_2DTileEngine.Sprite.BulletObjects">
+	<summary>
+ A new collection of bullets
+ </summary>
+	<remarks>Each time a new bullet is fired it is added to the collection of bullets. This makes updating each bullet easier</remarks>
+</member><member name="F:_2DTileEngine.Sprite.isActive">
+	<summary>
+ The sprite active, if active sprite is alive etc. 
+ </summary>
+</member><member name="M:_2DTileEngine.Sprite.LoadTextures(System.Drawing.Image[])">
+	<summary>
+ Loads sprite textures into an array of bitmap images <seealso>_textures</seealso>
+	</summary>
+	<param name="textures">Textures that represent the sprite's different states</param>
+</member><member name="M:_2DTileEngine.Sprite.DrawSprite(System.Drawing.Graphics@)">
+	<summary>
+ Draws game sprite
+ </summary>
+	<param name="g">Graphics object required in order to draw sprite on canvas</param>
+</member><member name="M:_2DTileEngine.Sprite.PlaceTile(System.Int32,System.Int32)">
+	<summary>
+ Calculates the current sprites positioning on tile. 
+ </summary>
+	<param name="x">player X coordinate</param>
+	<param name="y">Player Y coordinate</param>
+</member><member name="M:_2DTileEngine.Sprite.SpriteYCord(System.Int32)">
+	<summary>
+ Gets the player's sprite's X coordinate
+ </summary>
+	<param name="x">players s location</param>
+	<returns>returns the current X player's location on the tile grid</returns>
+</member><member name="M:_2DTileEngine.Sprite.SpriteXCord(System.Int32)">
+	<summary>
+ Gets the player's sprite's y coordinate
+ </summary>
+	<param name="y">player y coordinate</param>
+	<returns>returns players y location on the tile grid</returns>
+</member><member name="M:_2DTileEngine.Sprite.TilePassable(System.Int32,System.Int32)">
+	<summary>
+ Calculates the current sprites positioning on tile. And allows once invoked to change a tile         
+ </summary>
+	<param name="x">X position of player</param>
+	<param name="y">Y position of player</param>
+</member><member name="M:_2DTileEngine.Sprite.UpdateBulletPosition">
+	<summary>
+ Updates all the bullets positioning in the BulletObjects Collection
+ </summary>
+</member><member name="M:_2DTileEngine.Sprite.FireBullet">
+	<summary>
+ Fires Bullet
+ </summary>
+</member><member name="M:_2DTileEngine.Sprite.MoveLeft">
+	<summary>
+ Moves sprite left
+ </summary>
+	<remarks>Velocity = 50</remarks>
+</member><member name="M:_2DTileEngine.Sprite.MoveRight">
+	<summary>
+ Moves sprite right
+ </summary>
+	<remarks>Velocity = 50</remarks>
+</member><member name="M:_2DTileEngine.Sprite.MoveDown">
+	<summary>
+ Moves sprite down
+ </summary>
+	<remarks>Velocity = 50</remarks>
+</member><member name="M:_2DTileEngine.Sprite.MoveUp">
+	<summary>
+ Moves sprite up
+ </summary>
+	<remarks>Velocity = 50</remarks>
+</member><member name="F:_2DTileEngine.GameMap._textureId">
+	<summary>
+ The current tile ID of the tile that the sprite is on
+ </summary>
+</member><member name="F:_2DTileEngine.GameMap.BmpTextures">
+	<summary>
+ Stores the tile textures as bitmaps
+ </summary>
+</member><member name="M:_2DTileEngine.GameMap.#ctor(System.Int32@,System.Int32@)">
+	<summary>
+ On instantiating a new game map you need to specify certain parametres
+ </summary>
+	<param name="mapWidth">Map Width</param>
+	<param name="mapHeight">Map Height</param>
+</member><member name="M:_2DTileEngine.GameMap.LoadMap(System.String@)">
+	<summary>
+ Loads game map
+ </summary>
+	<param name="uri">File path of the games map</param>
+</member><member name="M:_2DTileEngine.GameMap.LoadTextures(System.Drawing.Bitmap[])">
+	<summary>
+ Load map tile textures
+ </summary>
+	<param name="textures">The tile textures as bitmaps</param>
+</member><member name="M:_2DTileEngine.GameMap.DrawMap(System.Drawing.Graphics@)">
+	<summary>
+ Draws Game Map
+ </summary>
+	<param name="graphics">Graphics object, used when drawing to games canvas</param>
+	<remarks>TileHeight, TileWidth are used as offsets
+ Algorithm runs in 0(n^2) time complexity</remarks>
+</member><member name="T:_2DTileEngine.GameMap">
+	<summary>
+ GameMap class is responsible for drawing the games map on to the games canvas
+ </summary>
+</member><member name="F:_2DTileEngine.SpriteAi._sprite">
+	<summary>
+ Sprite stae
+ </summary>
+</member><member name="F:_2DTileEngine.SpriteAi._difficulty">
+	<summary>
+ Stores AI difficulty as integer
+ </summary>
+	<remarks>Higher the difficulty, further away the AI can find you from - increases their field of view</remarks>
+</member><member name="F:_2DTileEngine.SpriteAi._distance">
+	<summary>
+ Stores distance between sprite and spriteAI
+ </summary>
+</member><member name="M:_2DTileEngine.SpriteAi.#ctor(System.Drawing.Rectangle@,System.Int32@,_2DTileEngine.Sprite@)">
+	<summary>
+ On creating new object call the base classes construtor in order to create new Sprite. 
+ </summary>
+	<param name="spriteRectangle">Stores sprite bounding box</param>
+	<param name="velocity">Stores velocity of sprite</param>
+	<param name="playerSprite">Stores the players sprite object - used to allow AI find the location on the player</param>
+	<remarks></remarks>
+</member><member name="M:_2DTileEngine.SpriteAi.PlayerStatus">
+	<summary>
+ Player staus methoid, determines if sprite is dead. If AI sprite is dead then spawn in new location with
+ parametres such as sprite health set to there default values
+ </summary>
+	<returns>Returns true or false. True if sprite is dead, false is sprite is alive</returns>
+</member><member name="M:_2DTileEngine.SpriteAi.Attack">
+	<summary>
+ Moves AI to the positioning on the playe sprite, in order to attack
+ </summary>
+</member><member name="M:_2DTileEngine.SpriteAi.RandomMovement">
+	<summary>
+ When Invokes moves AI randomly
+ </summary>
+	<remarks>Pseudo random numbe generator of a uniform distribution, making the probability of generating a number even </remarks>
+</member><member name="M:_2DTileEngine.SpriteAi.DrawSprite(System.Drawing.Graphics@)">
+	<summary>
+ Overloads the base classes draw sprite method
+ </summary>
+	<param name="g">Graphics Objects requires to draw sprire on canvas</param>
+</member><member name="T:_2DTileEngine.SpriteAi">
+	<summary>
+ Sprite AI Class
+ </summary>
+	<remarks>Inheirts basic functions and methods from Sprite Class, which impliments the sprite interface</remarks>
+</member>
+</members>
+</doc>

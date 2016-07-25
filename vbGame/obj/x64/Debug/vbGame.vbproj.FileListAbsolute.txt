@@ -1,0 +1,16 @@
+F:\vbGame\vbGame\bin\x64\Debug\vbGame.exe.manifest
+F:\vbGame\vbGame\bin\x64\Debug\vbGame.application
+F:\vbGame\vbGame\bin\x64\Debug\vbGame.exe
+F:\vbGame\vbGame\bin\x64\Debug\vbGame.pdb
+F:\vbGame\vbGame\bin\x64\Debug\vbGame.xml
+F:\vbGame\vbGame\obj\x64\Debug\ResolveAssemblyReference.cache
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.frmMain.resources
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.frmHelp.resources
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.Resources.resources
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.vbproj.GenerateResource.Cache
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.TrustInfo.xml
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.exe.manifest
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.application
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.exe
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.xml
+F:\vbGame\vbGame\obj\x64\Debug\vbGame.pdb

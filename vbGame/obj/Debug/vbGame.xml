@@ -1,0 +1,83 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+vbGame
+</name>
+</assembly>
+<members>
+<member name="F:vbGame.Player.Name">
+	<summary>
+ Stores player name
+ </summary>
+</member><member name="F:vbGame.Player.Score">
+	<summary>
+ Stores player score
+ </summary>
+</member><member name="M:vbGame.Player.#ctor(System.String,System.String)">
+	<summary>
+ Creates new objec of type player
+ </summary>
+	<param name="playerName">represents player's name as string</param>
+	<param name="playerScore">represents player score as string</param>
+	<remarks></remarks>
+</member><member name="T:vbGame.Player">
+	<summary>
+ Player oject class
+ </summary>
+	<remarks></remarks>
+</member><member name="F:vbGame.PlayerScores.scores">
+	<summary>
+ Array of player objects
+ </summary>
+</member><member name="F:vbGame.PlayerScores.nElements">
+	<summary>
+ Numebr of elements in the array
+ </summary>
+</member><member name="M:vbGame.PlayerScores.#ctor(System.Int32)">
+	<summary>
+ Creates new object of type player scores
+ </summary>
+	<param name="max">Max number of elements in the array</param>
+</member><member name="M:vbGame.PlayerScores.Insert(vbGame.Player)">
+	<summary>
+ Inserts new player object into the array
+ </summary>
+	<param name="value">object to be added</param>
+	<remarks></remarks>
+</member><member name="M:vbGame.PlayerScores.Sort">
+	<summary>
+ Bubble sort to sort the object of type player
+ </summary>
+</member><member name="M:vbGame.PlayerScores.Swap(System.Int32,System.Int32)">
+	<summary>
+ Bubble sort swap element method
+ </summary>
+	<param name="p1">player 1 object to swap with player 2</param>
+	<param name="p2">player 2 object</param>
+</member><member name="M:vbGame.PlayerScores.ReadPlayerScore">
+	<summary>
+ Reads player's scored from a text-file
+ </summary>
+	<remarks></remarks>
+</member><member name="M:vbGame.PlayerScores.DisplayPlayers">
+	<summary>
+ Sorts and siplayed sorted array of players
+ </summary>
+	<returns>returns the sorted array of player scores</returns>
+</member><member name="P:vbGame.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:vbGame.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:vbGame.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
